@@ -1,0 +1,106 @@
+body{
+    font-family: 'Segoe UI',sans-serif;
+    margin: 0;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+header{
+    background-color: #222;
+    color: white;
+    padding: 1rem 2rem;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem
+    padding-left: 0;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding : 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.post {
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 6px;
+
+}
+
+.post h2 {
+    margin-top: 0.5rem;
+}
+
+.post a {
+    display: inline-block;
+     margin-top : 0.5rem;
+     color: #0066cc;
+     text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #eee;
+    margin-top: 3rem;
+}
+
+
+
+
+body.dark {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark header {
+  background-color: #000;
+}
+
+body.dark .post {
+  background-color: #222;
+  border-color: #444;
+}
+
+body.dark footer {
+  background-color: #000;
+  color: #aaa;
+}
+
+#toggle-dark {
+  margin-top: 1rem;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}

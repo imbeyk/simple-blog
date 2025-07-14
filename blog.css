@@ -1,106 +1,180 @@
-body{
-    font-family: 'Segoe UI',sans-serif;
-    margin: 0;
-    background-color: #fdfdfd;
-    color: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-header{
-    background-color: #222;
-    color: white;
-    padding: 1rem 2rem;
-
+body {
+  background: #ffffff;
+  color: #111111;
 }
 
-header h1 {
-    margin: 0;
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background: #00bcd4;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem
-    padding-left: 0;
-
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-main {
-    padding : 2rem;
-    max-width: 800px;
-    margin: auto;
+nav ul li a:hover {
+  color: #e1bee7; /* light purple */
+}
+
+#menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: #ffffff;
+  border: none;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #00bcd4, #ab47bc);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 2rem;
+}
+
+/* Blog Posts */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .post {
-    margin-bottom: 2rem;
-    background-color: #fff;
-    border: 1px solid #ddd;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #ab47bc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.read-more {
+  background: #ab47bc;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.read-more:hover {
+  background: #8e24aa;
+}
+
+/* Social Links */
+.socials {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.socials a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #00bcd4;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #ab47bc;
+}
+
+/* Footer */
+footer {
+  background: #00bcd4;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #00bcd4;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    gap: 1rem;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+  }
 
+  nav ul.show {
+    display: flex;
+  }
+
+  #menu-btn {
+    display: block;
+  }
 }
 
-.post img {
-    max-width: 100%;
-    border-radius: 6px;
-
-}
-
-.post h2 {
-    margin-top: 0.5rem;
-}
-
-.post a {
-    display: inline-block;
-     margin-top : 0.5rem;
-     color: #0066cc;
-     text-decoration: none;
-}
-
-.post a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #eee;
-    margin-top: 3rem;
-}
-
-
-
-
-body.dark {
-  background-color: #111;
-  color: #eee;
-}
-
-body.dark header {
-  background-color: #000;
-}
-
-body.dark .post {
-  background-color: #222;
-  border-color: #444;
-}
-
-body.dark footer {
-  background-color: #000;
-  color: #aaa;
-}
-
-#toggle-dark {
-  margin-top: 1rem;
-  background-color: #444;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
